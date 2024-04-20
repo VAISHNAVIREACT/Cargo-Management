@@ -1,0 +1,32 @@
+<!-- shipment_details.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom styles here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Shipment Details</h1>
+        <div class="shipment-details">
+            <h2>Shipment ID: {{ shipment.id }}</h2>
+            <p><strong>Customer:</strong> {{ shipment.customer }}</p>
+            <p><strong>Destination:</strong> {{ shipment.destination }}</p>
+            <p><strong>Shipping Date:</strong> {{ shipment.shipping_date }}</p>
+            <!-- Add more shipment details here -->
+        </div>
+    </div>
+</body>
+</html>

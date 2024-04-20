@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-U9uX1mtyk2KRKsLl9IBpSS3QMv3pBx8vHVjrvyylz3d/Rx0aHvP9dpq2uP6WFGf5" crossorigin="anonymous">
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .input-group .input-group-icon {
+            position: relative;
+        }
+
+        .input-group .input-group-icon i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            color: #888;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .login-link {
+            text-align: center;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-container">
+    <h2>Customer Signup</h2>
+    <form action="{% url 'customer_signup' %}" method="POST">
+        {% csrf_token %}
+        <div class="input-group">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <div class="input-group-icon"><i class="fas fa-user"></i></div>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Email" required>
+            <div class="input-group-icon"><i class="fas fa-envelope"></i></div>
+        </div>
+        <div class="input-group">
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <div class="input-group-icon"><i class="fas fa-phone"></i></div>
+        </div>
+        <div class="input-group">
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="input-group-icon"><i class="fas fa-lock"></i></div>
+        </div>
+        <div class="input-group">
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <div class="input-group-icon"><i class="fas fa-lock"></i></div>
+        </div>
+        <button type="submit" class="btn">Signup</button>
+    </form>
+    <div class="login-link">
+        <p>Already have an account? <a href="{% url 'customer_login' %}">Login</a></p>
+    </div>
+</div>
+
+</body>
+</html>

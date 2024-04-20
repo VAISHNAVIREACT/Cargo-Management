@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <!-- Link to Bootstrap CSS for standard styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add your custom CSS and JavaScript links here -->
+    <style>
+        /* Custom CSS */
+        body {
+            padding-top: 60px; /* Adjust body padding to accommodate fixed navbar */
+            background-image: url('https://lh4.googleusercontent.com/FVbWdoofmRp8wxw_UnYtty7cl9iQdcFA2amjap9Zp4yFxBMOXRmY4Xm8reTmNIBL5Q2_ulI4kB6o7vZDJvmL33V7goXm0N2AY0wlbfqAvwdxSZGnD7_-20DnUAHvUC8sEmGKZa1rUEd6bSp5WDPPc1M');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color: #343a40; /* Navbar background color */
+            padding: 10px 20px; /* Navbar padding */
+        }
+
+        .navbar-brand {
+            font-size: 24px; /* Navbar brand font size */
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px; /* Navbar link font size */
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 10px; /* Space between navbar items */
+        }
+
+        .navbar-toggler {
+            border-color: #fff; /* Color of the navbar toggler icon */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff; /* Color of the navbar toggler icon */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Customer Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add_shipment'%}">Add Shipment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add_inventory'%}">Add Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tracking'%}">Track</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+
+    <!-- Add your JavaScript links here -->
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

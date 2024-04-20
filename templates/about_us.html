@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS styles here -->
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1713204000&semt=ais');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color:white;
+
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .about-content {
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .about-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .navbar {
+            border-radius: 0;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home'%}">Cargo Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'customer_login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'customer_signup' %}">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="about-content">
+        <h1 class="text-center">About Us</h1>
+        <p>Cargo Tracker is a comprehensive cargo management system designed to streamline the process of managing cargo shipments and logistics.</p>
+        <p>Our system provides real-time tracking of cargo shipments, allowing you to monitor the status and location of your cargo at any time.</p>
+        <p>With Cargo Tracker, you can efficiently manage inventory and warehouse operations, generate reports for shipment status and inventory, and streamline your logistics operations.</p>
+        <p>Whether you're a small business or a large enterprise, Cargo Tracker is the perfect solution for managing your cargo and logistics needs.</p>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS styles here -->
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://st3.depositphotos.com/1337322/31715/i/450/depositphotos_317156376-stock-photo-contact-us-cubes-set-spotlighted.jpg');
+            background-size: 2000px;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .contact-info h3 {
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+
+        /* Adjustments for the form */
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group textarea {
+            resize: vertical; /* Allow vertical resizing of textarea */
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home'%}">Cargo Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home'%}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'customer_login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'customer_signup' %}">Register</a>
+            </li>
+    </ul>
+        
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="contact-info">
+                <h3>Customer Support</h3>
+                <p>Email: support@cargomanagement.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="contact-info">
+                <h3>Sales Inquiries</h3>
+                <p>Email: sales@cargomanagement.com</p>
+                <p>Phone: +1 (555) 987-6543</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="contact-info">
+                <h3>Technical Support</h3>
+                <p>Email: techsupport@cargomanagement.com</p>
+                <p>Phone: +1 (555) 456-7890</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h4 class="text-center">For general inquiries or feedback, please fill out the form below:</h4>
+            <!-- Contact form -->
+            <form action="{% url 'contact_us' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
